@@ -44,4 +44,4 @@ after_script:
 env:
  global:
    # Coding Pages
-   - CO_REF: git.coding.net/hanyajun0123/hanyajun0123.coding.me.git
+   - CO_REF: git.dev.tencent.com/hanyajun0123/coding_basis_review.git
