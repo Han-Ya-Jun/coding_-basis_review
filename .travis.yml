@@ -4,6 +4,13 @@ node_js:
 branches:
   only:
   - master
+notifications:
+  email:
+    recipients:
+      - 1581532052@qq.com
+      - hanyajun5876@163.com
+    on_success: change # default: change
+    on_failure: always # default: alway
 cache:
   directories:
   - node_modules
@@ -23,3 +30,17 @@ deploy:
   verbose: true
   on:
     branch: master
+
+after_script:
+   - cd ./_book
+   - git init
+   - git add .
+   - git commit -m "Update Gitbook By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+   - git push --force --quiet "https://hanyajun0123:${CODING_TOKEN}@${CO_REF}" master:master
+   - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+
+
+env:
+ global:
+   # Coding Pages
+   - CO_REF: git@git.dev.tencent.com:hanyajun0123/coding_basis_review.git
