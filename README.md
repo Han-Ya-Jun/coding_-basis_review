@@ -5,6 +5,7 @@
 > 更多的学习笔记请参考：
 > - [Golang 学习笔记](https://hanyajun.com/golang-notes/)
 > - [编程基础复盘](https://hanyajun.com/coding_basis_review/)
+> - [编程人生](https://hanyajun.com/coding-life/)
 > - 个人博客：[hanyajun.com](https://hanyajun.com/)
 
 
